@@ -1,9 +1,9 @@
 import { BsBarChartFill, BsCart3 } from "react-icons/bs";
 import { FaRegHeart } from "react-icons/fa";
 import { IoPersonOutline } from "react-icons/io5";
-import IconGroup from "../../IconGroup";
 import MobileNavigation from "./Navigation/MobileNavigation";
 import { TbSearch } from "react-icons/tb";
+import IconGroup from "./IconGroup";
 
 const Topbar = () => {
   return (
