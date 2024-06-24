@@ -4,11 +4,13 @@ import Shop from "../pages/Shop";
 import Contact from "../pages/Contact";
 import MainLayout from "../layout/MainLayout";
 import Blogs from "../pages/Blogs";
+import Error404 from "../pages/Error404";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout />,
+    errorElement: <Error404 />,
     children: [
       {
         index: true,
