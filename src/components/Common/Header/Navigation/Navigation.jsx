@@ -4,13 +4,16 @@ import Others from "./Others";
 
 const Navigation = () => {
   return (
-    <div className="bg-accent py-2">
-      <div className="container mx-auto flex justify-between items-center">
-        <div className="flex items-center gap-12">
-          <AllDepartments />
-          <Menu />
+    <div>
+      {/* Desktop Navigation */}
+      <div className="bg-accent py-2 hidden lg:block">
+        <div className="container mx-auto flex justify-between items-center">
+          <div className="flex items-center gap-12">
+            <AllDepartments />
+            <Menu />
+          </div>
+          <Others />
         </div>
-        <Others />
       </div>
     </div>
   );
