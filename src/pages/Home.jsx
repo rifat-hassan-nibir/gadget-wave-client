@@ -15,6 +15,7 @@ const Home = () => {
         <NewArrivalProducts />
         <Gap />
         <Slider />
+        <Gap />
       </div>
     </div>
   );
