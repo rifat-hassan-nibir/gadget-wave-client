@@ -12,6 +12,7 @@ const Home = () => {
         <PopularCategories />
         <Gap big />
         <NewArrivalProducts />
+        <Gap />
       </div>
     </div>
   );
