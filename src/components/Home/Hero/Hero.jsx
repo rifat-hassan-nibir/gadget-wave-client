@@ -18,6 +18,7 @@ const Hero = () => {
             <BannerText
               heading={"Sony 5g Headphones"}
               description={"Only Music. Nothing Else."}
+              textColor={"white"}
               buttonText={"View Details"}
               buttonColor={"primary"}
             />
@@ -30,6 +31,7 @@ const Hero = () => {
               <BannerText
                 heading={"Air Mavic 3"}
                 description={"As powerful as it is portable"}
+                textColor={"white"}
                 buttonText={"Shop Now"}
                 buttonColor={"black"}
               />
@@ -38,10 +40,22 @@ const Hero = () => {
           <div className="lg:col-span-4">
             <div className="grid gap-5 h-[500px]">
               <div style={{ backgroundImage: `url(${banner3})` }} className=" text-white bg-cover bg-center bg-no-repeat rounded-lg p-8">
-                <BannerText heading={"Handheld"} description={"USB 3 rechargeable"} buttonText={"Shop Now"} buttonColor={"black"} />
+                <BannerText
+                  heading={"Handheld"}
+                  description={"USB 3 rechargeable"}
+                  textColor={"black"}
+                  buttonText={"Shop Now"}
+                  buttonColor={"black"}
+                />
               </div>
               <div style={{ backgroundImage: `url(${banner4})` }} className=" text-white bg-cover bg-center bg-no-repeat rounded-lg p-8">
-                <BannerText heading={"Gearbox"} description={"Upto 30% discount"} buttonText={"Shop Now"} buttonColor={"black"} />
+                <BannerText
+                  heading={"Gearbox"}
+                  description={"Upto 30% discount"}
+                  textColor={"black"}
+                  buttonText={"Shop Now"}
+                  buttonColor={"black"}
+                />
               </div>
             </div>
           </div>
