@@ -1,6 +1,7 @@
 import Hero from "../components/Home/Hero/Hero";
 import NewArrivalProducts from "../components/Home/NewArrivalProducts/NewArrivalProducts";
 import PopularCategories from "../components/Home/PopularCategories/PopularCategories";
+import Slider from "../components/Home/Slider/Slider";
 import Gap from "../components/Utils/Gap";
 
 const Home = () => {
@@ -13,6 +14,7 @@ const Home = () => {
         <Gap big />
         <NewArrivalProducts />
         <Gap />
+        <Slider />
       </div>
     </div>
   );
