@@ -18,7 +18,7 @@ const MobileNavigation = () => {
       >
         <div className="px-6">
           <a className="flex-none text-xl font-semibold" href="#" aria-label="Brand">
-            Click Market
+            Click Shop
           </a>
         </div>
         <nav className="hs-accordion-group p-6 w-full flex flex-col flex-wrap" data-hs-accordion-always-open>

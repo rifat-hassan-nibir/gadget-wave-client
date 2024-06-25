@@ -10,7 +10,7 @@ const AllDepartments = () => {
       <button
         id="hs-dropdown-with-icons"
         type="button"
-        className="hs-dropdown-toggle py-3 px-6 inline-flex items-center gap-x-8 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none"
+        className="hs-dropdown-toggle py-3 px-6 inline-flex items-center gap-x-8 text-sm font-medium rounded-lg bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none"
       >
         All Departments
         <svg
