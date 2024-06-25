@@ -13,7 +13,7 @@ const Hero = () => {
         <div className="grid lg:grid-cols-12 gap-5">
           <div
             style={{ backgroundImage: `url(${banner1})` }}
-            className={`lg:col-span-5 flex flex-col justify-center text-white bg-cover bg-center bg-no-repeat rounded-lg p-8 h-[440px] lg:h-[500px]`}
+            className="lg:col-span-5 flex flex-col justify-center text-white bg-cover bg-center bg-no-repeat rounded-lg p-8 h-[440px] lg:h-[500px]"
           >
             <BannerText
               heading={"Sony 5g Headphones"}

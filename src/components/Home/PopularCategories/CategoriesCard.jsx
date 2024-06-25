@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 const CategoriesCard = ({ categoryImage, title, productNumber }) => {
   return (
-    <div className="w-[210px] text-center space-y-4">
+    <div className="text-center space-y-4">
       <div className="bg-[#F5F5F7]">
         <img src={categoryImage} className="w-full hover:scale-110 hover:cursor-pointer transition-all duration-300" />
       </div>
