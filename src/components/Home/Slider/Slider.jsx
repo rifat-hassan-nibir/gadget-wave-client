@@ -8,7 +8,7 @@ import Slide1 from "./Slide1";
 
 const Slider = () => {
   return (
-    <div>
+    <div className="rounded-lg">
       <Swiper navigation={true} loop={true} modules={[Navigation]} className="mySwiper3">
         <SwiperSlide>
           <Slide1 />

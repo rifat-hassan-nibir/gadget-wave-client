@@ -1,7 +1,9 @@
+import ComingSoon from "../components/ComingSoon";
+
 const Contact = () => {
   return (
     <div>
-      <h1>Contact Page</h1>
+      <ComingSoon />
     </div>
   );
 };
