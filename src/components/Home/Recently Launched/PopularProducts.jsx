@@ -20,7 +20,7 @@ const PopularProducts = () => {
       <Gap />
       <div className="container mx-auto px-4 lg:px-0">
         <SectionTitle title={"Popular Products"} />
-        <div className="grid grid-cols-2 lg:grid-cols-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
           <ProductCard productImage={AlexaHome} productName={"Alexa Home 3"} price={435} whiteBg={true} border={true} />
           <ProductCard productImage={CrosoftXboxElite} productName={"Crosoft xbox Elite"} price={60} whiteBg={true} border={true} />
           <ProductCard productImage={headPhones} productName={"Sony Headphones"} price={500} whiteBg={true} border={true} />

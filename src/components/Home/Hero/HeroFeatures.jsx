@@ -7,7 +7,7 @@ import { RiDiscountPercentFill } from "react-icons/ri";
 const HeroFeatures = () => {
   return (
     <div>
-      <div className="flex flex-col lg:flex-row justify-between gap-3">
+      <div className="grid grid-cols-1 lg:grid-cols-5 gap-3">
         <div className="flex items-center gap-4 bg-white p-4 rounded-lg">
           <RiDiscountPercentFill className="size-6" />
           <p>
