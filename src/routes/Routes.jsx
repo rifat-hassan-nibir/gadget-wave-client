@@ -5,6 +5,7 @@ import Contact from "../pages/Contact";
 import MainLayout from "../layout/MainLayout";
 import Blogs from "../pages/Blogs";
 import Error404 from "../pages/Error404";
+import SingleProductPage from "../pages/SingleProductPage";
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
       {
         path: "/contact",
         element: <Contact />,
+      },
+      {
+        path: "/single-product",
+        element: <SingleProductPage />,
       },
     ],
   },
