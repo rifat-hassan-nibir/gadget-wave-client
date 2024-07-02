@@ -5,7 +5,7 @@ import Contact from "../pages/Contact";
 import MainLayout from "../layout/MainLayout";
 import Blogs from "../pages/Blogs";
 import Error404 from "../pages/Error404";
-import SingleProductPage from "../pages/SingleProductPage";
+import ProductDetails from "../pages/ProductDetails";
 
 const router = createBrowserRouter([
   {
@@ -30,8 +30,8 @@ const router = createBrowserRouter([
         element: <Contact />,
       },
       {
-        path: "/single-product",
-        element: <SingleProductPage />,
+        path: "/product-details",
+        element: <ProductDetails />,
       },
     ],
   },

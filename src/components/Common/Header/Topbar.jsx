@@ -24,7 +24,7 @@ const Topbar = () => {
             type="button"
             className="h-11 px-4 py-2 text-white transition-colors duration-300 transform bg-primary rounded-r-lg rounded-l-none hover:bg-secondary"
           >
-            <TbSearch />
+            <TbSearch className="text-[20px]" />
           </button>
         </form>
       </div>

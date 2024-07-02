@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 /* eslint-disable react/prop-types */
 const ProductCard = ({ whiteBg, border, productImage, category, productName, price }) => {
   return (
-    <Link to="/" className={`${border && "border"} h-auto`}>
+    <Link to="/product-details" className={`${border && "border"} h-auto`}>
       <img src={productImage} className="w-full " />
       <div className={`${whiteBg && "bg-white"} px-5 pb-5`}>
         <p className="text-[13px] text-gray-600">{category}</p>
