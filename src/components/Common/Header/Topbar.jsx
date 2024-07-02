@@ -7,7 +7,7 @@ import IconGroup from "./IconGroup";
 
 const Topbar = () => {
   return (
-    <div className="container mx-auto flex flex-wrap lg:flex-nowrap justify-between items-center gap-6 py-3 px-4 lg:px-0">
+    <div className="container mx-auto flex flex-wrap lg:flex-nowrap justify-between items-center gap-6 py-3 px-4 lg:px-6">
       {/* Logo */}
       <h1 className="text-2xl font-semibold order-1 lg:order-1">Tech Bazar</h1>
 
@@ -30,7 +30,7 @@ const Topbar = () => {
       </div>
 
       {/* Icon Group */}
-      <div className="order-2 lg:order-3">
+      <div className="flex items-center order-2 lg:order-3">
         <div className="flex items-center gap-4 lg:gap-6 ">
           <IconGroup IconName={IoPersonOutline} text={"Sign In"} />
           <IconGroup IconName={BsBarChartFill} text={"Comparison"} />

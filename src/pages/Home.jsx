@@ -12,7 +12,7 @@ const Home = () => {
     <div>
       <Hero />
       <Gap />
-      <div className="container mx-auto px-4 lg:px-0">
+      <div className="container mx-auto px-4 lg:px-6">
         <PopularCategories />
         <Gap big />
         <NewArrivalProducts />
@@ -24,7 +24,7 @@ const Home = () => {
       </div>
       <PopularProducts />
       <Gap />
-      <div className="container mx-auto px-4 lg:px-0">
+      <div className="container mx-auto px-4 lg:px-6">
         <FromOurArticles />
       </div>
       <Gap big />

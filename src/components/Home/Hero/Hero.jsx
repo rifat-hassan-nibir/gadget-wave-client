@@ -8,7 +8,7 @@ import HeroFeatures from "./HeroFeatures";
 const Hero = () => {
   return (
     <div className="bg-[#F7F7F8] pt-5 pb-12 lg:pb-16">
-      <div className="container mx-auto px-4 lg:px-0">
+      <div className="container mx-auto px-4 lg:px-6">
         {/* Banners */}
         <div className="grid lg:grid-cols-12 gap-5">
           <div
