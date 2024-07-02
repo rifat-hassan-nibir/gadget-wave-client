@@ -1,15 +1,15 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}", "./node_modules/preline/preline.js"],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       colors: {
-        primary: "#00796A",
-        secondary: "#006559",
-        accent: "#E0F2F1",
+        primary: "#A2845F",
+        secondary: "#EAE1D0",
+        accent: "#FAF3EB",
         lightGray: "#F5F5F6",
       },
     },
   },
-  plugins: [require("preline/plugin")],
+  plugins: [],
 };

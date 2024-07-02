@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Footer = () => {
   return (
     //  ========== FOOTER ==========
@@ -6,9 +8,9 @@ const Footer = () => {
         {/* Grid  */}
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
           <div className="col-span-full lg:col-span-1">
-            <a className="flex-none text-2xl font-bold text-white" href="#" aria-label="Brand">
-              Click Shop
-            </a>
+            <Link to="/" className="flex-none text-2xl font-bold text-white">
+              Tech Bazar
+            </Link>
           </div>
           {/* End Col  */}
 
@@ -96,7 +98,7 @@ const Footer = () => {
 
         <div className="mt-5 sm:mt-12 grid gap-y-2 sm:gap-y-0 sm:flex sm:justify-between sm:items-center">
           <div className="flex justify-between items-center">
-            <p className="text-sm text-gray-400">© 2024 Click Shop. All rights reserved.</p>
+            <p className="text-sm text-gray-400">© 2024 Tech Bazar. All rights reserved.</p>
           </div>
           {/* End Col  */}
           {/* Social Brands  */}

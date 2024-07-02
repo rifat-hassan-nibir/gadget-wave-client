@@ -18,7 +18,7 @@ const Hero = () => {
             <BannerText
               heading={"Sony 5g Headphones"}
               description={"Only Music. Nothing Else."}
-              textColor={"white"}
+              textColor={"black"}
               buttonText={"View Details"}
               buttonColor={"primary"}
             />

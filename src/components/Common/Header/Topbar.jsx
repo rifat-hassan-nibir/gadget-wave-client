@@ -9,7 +9,7 @@ const Topbar = () => {
   return (
     <div className="container mx-auto flex flex-wrap lg:flex-nowrap justify-between items-center gap-6 py-3 px-4 lg:px-0">
       {/* Logo */}
-      <h1 className="text-2xl font-semibold order-1 lg:order-1">Click Shop</h1>
+      <h1 className="text-2xl font-semibold order-1 lg:order-1">Tech Bazar</h1>
 
       {/* Search bar */}
       <div className="w-full max-w-3xl order-3 lg:order-2 mx-auto bg-transparent border rounded-lg focus-within:border-primary focus-within:ring focus-within:ring-primary focus-within:ring-opacity-40">

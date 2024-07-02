@@ -4,43 +4,56 @@ import { CiCamera } from "react-icons/ci";
 import { GiSmartphone } from "react-icons/gi";
 import { IoIosLaptop } from "react-icons/io";
 
+import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
+import { ChevronDownIcon } from "@heroicons/react/16/solid";
+import { Link } from "react-router-dom";
+
+const menuItems = [
+  { name: "Audio Electronics", icon: MdOutlineAudiotrack, link: "/shop" },
+  { name: "Camera & Drones", icon: CiCamera, link: "/shop" },
+  { name: "Cellphones", icon: GiSmartphone, link: "/shop" },
+  { name: "Computers", icon: IoIosLaptop, link: "/shop" },
+  { name: "Daily Deals", icon: MdOutlineDiscount, link: "/shop" },
+  { name: "iPads & Tablets", icon: GiSmartphone, link: "/shop" },
+  { name: "Portable Speakers", icon: MdOutlineAudiotrack, link: "/shop" },
+];
+
 const AllDepartments = () => {
   return (
-    <div className="hs-dropdown relative inline-flex">
-      <button
-        id="hs-dropdown-with-icons"
-        type="button"
-        className="hs-dropdown-toggle py-3 px-6 inline-flex items-center gap-x-8 text-sm font-medium rounded-lg bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none"
-      >
-        All Departments
-        <svg
-          className="hs-dropdown-open:rotate-180 size-4"
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <path d="m6 9 6 6 6-6" />
-        </svg>
-      </button>
+    <div className="flex items-center justify-between">
+      <Menu>
+        <MenuButton className="inline-flex items-center gap-2 rounded-md bg-white py-2.5 px-6 text-sm/6 font-semibold text-black shadow-inner shadow-white/10 focus:outline-none data-[open]:bg-white data-[focus]:outline-1 data-[focus]:outline-white">
+          All Departments
+          <ChevronDownIcon className="size-4 ml-5 fill-black" />
+        </MenuButton>
 
-      <div
-        className="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden min-w-60 bg-white shadow-md rounded-lg p-2 mt-2 divide-y divide-gray-200"
-        aria-labelledby="hs-dropdown-with-icons"
-      >
-        <SingleDepartment IconName={MdOutlineAudiotrack} departmentName={"Audio & Electronics"} />
-        <SingleDepartment IconName={CiCamera} departmentName={"Camera & Drone"} />
-        <SingleDepartment IconName={GiSmartphone} departmentName={"Cellphones"} />
-        <SingleDepartment IconName={IoIosLaptop} departmentName={"Computers"} />
-        <SingleDepartment IconName={MdOutlineDiscount} departmentName={"Daily Deals"} />
-      </div>
+        <MenuItems
+          transition
+          anchor="bottom start"
+          className="w-[250px] mt-2 origin-top-right rounded-xl border border-white/5 bg-white p-2 text-sm/6 text-black transition duration-100 ease-out [--anchor-gap:var(--spacing-1)] focus:outline-none data-[closed]:scale-95 data-[closed]:opacity-0"
+        >
+          {menuItems.map((item, index) => (
+            <MenuItem key={index}>
+              <Link
+                to={item.link}
+                className="group flex w-full items-center gap-2 rounded-lg py-2.5 px-3 data-[focus]:bg-accent transition-all duration-200"
+              >
+                <SingleDepartment IconName={item.icon} departmentName={item.name} />
+              </Link>
+            </MenuItem>
+          ))}
+        </MenuItems>
+      </Menu>
     </div>
   );
 };
 
 export default AllDepartments;
+
+{
+  /* <SingleDepartment IconName={MdOutlineAudiotrack} departmentName={"Audio & Electronics"} />
+<SingleDepartment IconName={CiCamera} departmentName={"Camera & Drone"} />
+<SingleDepartment IconName={GiSmartphone} departmentName={"Cellphones"} />
+<SingleDepartment IconName={IoIosLaptop} departmentName={"Computers"} />
+<SingleDepartment IconName={MdOutlineDiscount} departmentName={"Daily Deals"} /> */
+}
