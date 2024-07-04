@@ -5,7 +5,7 @@ const ComingSoon = () => {
         <h2 className="text-3xl font-bold text-center text-gray-800 mb-4">Coming Soon!</h2>
         <p className="text-center text-gray-600 mb-8">This page is under construction. Stay tuned for updates.</p>
         <div className="flex justify-center">
-          <div className="rounded-full bg-[#00796A] p-4">
+          <div className="rounded-full bg-primary p-4">
             <svg
               className="w-12 h-12 text-white mx-auto"
               fill="none"

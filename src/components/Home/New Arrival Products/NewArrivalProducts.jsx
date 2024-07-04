@@ -4,20 +4,29 @@ import "swiper/css";
 import "swiper/css/navigation";
 
 import { Navigation } from "swiper/modules";
-import { useEffect, useState } from "react";
 import SectionTitle from "../../Common/SectionTitle";
 import ProductCard from "../../ProductCard";
+import { useQuery } from "@tanstack/react-query";
+import axios from "axios";
+import Loading from "../../Utils/Loading";
+import Error from "../../Utils/Error";
 
 const NewArrivalProducts = () => {
-  const [products, setProducts] = useState([]);
+  const {
+    data: products = [],
+    isPending,
+    isError,
+    error,
+  } = useQuery({
+    queryKey: ["products"],
+    queryFn: async () => {
+      const { data } = await axios.get(`${import.meta.env.VITE_API_LINK}/products`);
+      return data;
+    },
+  });
 
-  useEffect(() => {
-    fetch("./products.json")
-      .then((res) => res.json())
-      .then((data) => {
-        setProducts(data);
-      });
-  }, []);
+  if (isPending) return <Loading />;
+  if (isError) return <Error message={error.message} />;
 
   return (
     <div>
@@ -27,9 +36,9 @@ const NewArrivalProducts = () => {
       <div className="hidden lg:block">
         <Swiper slidesPerView={5} spaceBetween={24} navigation={true} loop={true} modules={[Navigation]} className="mySwiper">
           {products.map((product) => (
-            <SwiperSlide key={product.id}>
+            <SwiperSlide key={product._id}>
               <ProductCard
-                id={product.id}
+                id={product._id}
                 productImage={product.image}
                 category={product.category}
                 title={product.title}

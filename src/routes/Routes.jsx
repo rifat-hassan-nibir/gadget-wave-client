@@ -30,7 +30,6 @@ const router = createBrowserRouter([
         element: <Contact />,
       },
       {
-        loader: () => fetch("./products.json"),
         path: "/product-details/:id",
         element: <ProductDetails />,
       },

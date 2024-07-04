@@ -1,18 +1,27 @@
 import ProductCard from "../../components/ProductCard";
 import { BsGrid3X3Gap } from "react-icons/bs";
 import { CiBoxList } from "react-icons/ci";
-import { useEffect, useState } from "react";
+import { useQuery } from "@tanstack/react-query";
+import axios from "axios";
+import Loading from "../Utils/Loading";
+import Error from "../Utils/Error";
 
 const ProductGrid = () => {
-  const [products, setProducts] = useState([]);
+  const {
+    data: products = [],
+    isPending,
+    isError,
+    error,
+  } = useQuery({
+    queryKey: ["products"],
+    queryFn: async () => {
+      const { data } = await axios.get(`${import.meta.env.VITE_API_LINK}/products`);
+      return data;
+    },
+  });
 
-  useEffect(() => {
-    fetch("./products.json")
-      .then((res) => res.json())
-      .then((data) => {
-        setProducts(data);
-      });
-  }, []);
+  if (isPending) return <Loading />;
+  if (isError) return <Error message={error.message} />;
 
   return (
     <div>
@@ -35,8 +44,8 @@ const ProductGrid = () => {
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {products.map((product) => (
           <ProductCard
-            key={product.id}
-            id={product.id}
+            key={product._id}
+            id={product._id}
             productImage={product.image}
             title={product.title}
             price={product.price}

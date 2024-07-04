@@ -1,13 +1,30 @@
 import { FaRegHeart } from "react-icons/fa";
 import { BsBarChartFill } from "react-icons/bs";
-import { useLoaderData, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import { useQuery } from "@tanstack/react-query";
+import axios from "axios";
+import Loading from "../components/Utils/Loading";
+import Error from "../components/Utils/Error";
 
 const ProductDetails = () => {
   const { id } = useParams();
-  const productId = parseInt(id);
-  const products = useLoaderData();
 
-  const product = products.find((product) => product.id === productId);
+  const {
+    data: product = {},
+    isPending,
+    isError,
+    error,
+  } = useQuery({
+    queryKey: ["product", id],
+    queryFn: async () => {
+      const { data } = await axios.get(`${import.meta.env.VITE_API_LINK}/product/${id}`);
+      return data;
+    },
+  });
+
+  if (isPending) return <Loading />;
+  if (isError) return <Error message={error.message} />;
+
   const { image, title, brand, details, deliveryTime, SKU, category, price, stock } = product;
 
   return (
