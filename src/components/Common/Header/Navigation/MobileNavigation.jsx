@@ -1,8 +1,7 @@
 import { LuMenu } from "react-icons/lu";
-import AllDepartments from "./AllDepartments";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
-const Navlinks = [
+const links = [
   {
     id: 1,
     path: "/",
@@ -40,10 +39,10 @@ const MobileNavigation = () => {
         <ul className="menu bg-base-200 text-base-content min-h-full w-80 p-4">
           {/* Sidebar content here */}
           <li>
-            {Navlinks.map((link) => (
-              <Link to={link.path} key={link.id}>
+            {links.map((link) => (
+              <NavLink to={link.path} key={link.id}>
                 {link.name}
-              </Link>
+              </NavLink>
             ))}
           </li>
         </ul>
