@@ -7,7 +7,7 @@ const Error404 = () => {
       <header className="mb-auto flex justify-center z-50 w-full py-4">
         <nav className="px-4 sm:px-6 lg:px-8" aria-label="Global">
           <Link to="/" className="flex-none text-xl font-bold sm:text-3xl">
-            Tech Bazar
+            Gadget Wave
           </Link>
         </nav>
       </header>
