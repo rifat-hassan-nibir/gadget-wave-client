@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom";
 
 /* eslint-disable react/prop-types */
-const ProductCard = ({ whiteBg, border, productImage, category, productName, price }) => {
+const ProductCard = ({ id, whiteBg, border, productImage, category, title, price }) => {
   return (
-    <Link to="/product-details" className={`${border && "border"} h-auto`}>
-      <img src={productImage} className="w-full " />
+    <Link to={`/product-details/${id}`} className={`${border && "border"} h-auto hover:scale-[103%] transition-all duration-300`}>
+      <img src={productImage} className="w-full" />
       <div className={`${whiteBg && "bg-white"} px-5 pb-5`}>
         <p className="text-[13px] text-gray-600">{category}</p>
-        <h3 className="text-[16px] font-medium">{productName}</h3>
+        <h3 className="text-[16px] font-medium">{title}</h3>
 
         {/* Rating  */}
         <div className="flex items-center gap-0.5 mt-1">

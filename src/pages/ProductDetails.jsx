@@ -1,20 +1,27 @@
 import { FaRegHeart } from "react-icons/fa";
-import headphone from "../assets/Product Images/Headphone.jpg";
 import { BsBarChartFill } from "react-icons/bs";
+import { useLoaderData, useParams } from "react-router-dom";
 
 const ProductDetails = () => {
+  const { id } = useParams();
+  const productId = parseInt(id);
+  const products = useLoaderData();
+
+  const product = products.find((product) => product.id === productId);
+  const { image, title, brand, details, deliveryTime, SKU, category, price, stock } = product;
+
   return (
     <div className="container mx-auto px-4 lg:px-0 py-8 lg:py-12">
       <div className="grid grid-cols-1 lg:grid-cols-12 items-start gap-6 lg:gap-8">
         {/* product image */}
         <div className="lg:col-span-6">
-          <img className="w-full" src={headphone} />
+          <img className="w-full" src={image} />
         </div>
         {/* details */}
         <div className="lg:col-span-6">
-          <h2 className="text-[24px] font-semibold">Sony Headphone</h2>
+          <h2 className="text-[24px] font-semibold">{title}</h2>
           <p className="text-[13px] text-gray-600 mt-3">
-            Brand: <span className="text-primary">Sony</span>
+            Brand: <span className="text-primary">{brand}</span>
           </p>
           {/* compare & wishlist */}
           <div className="flex items-center gap-4 mt-5">
@@ -112,27 +119,22 @@ const ProductDetails = () => {
           <hr className="my-5" />
 
           {/* Product Details */}
-          <p className="text-[15px] text-gray-600 mt-3">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate totam veniam sint accusamus aliquid error quia nulla
-            laboriosam saepe consectetur. Aspernatur fugiat provident facere quam? Saepe dolor obcaecati velit quod! <br />
-            <br /> Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis cumque, atque corporis quo aliquid perspiciatis
-            ratione. Error iure porro dicta nostrum repudiandae tempora architecto provident cum. Eligendi deserunt odit quisquam.
-          </p>
+          <p className="text-[15px] text-gray-600 mt-3">{details}</p>
 
           <div className="mt-6 space-y-2">
             <p className="text-[15px] font-semibold text-gray-600">
-              Estimated Delivery: <span className="font-normal">5 days</span>
+              Estimated Delivery: <span className="font-normal">{deliveryTime} days</span>
             </p>
             <p className="text-[15px] font-semibold text-gray-600">
-              SKU: <span className="font-normal">#00458321</span>
+              SKU: <span className="font-normal">{SKU}</span>
             </p>
             <p className="text-[15px] font-semibold text-gray-600">
-              Category: <span className="font-normal">Audio</span>
+              Category: <span className="font-normal">{category}</span>
             </p>
           </div>
 
-          <p className="text-[24px] font-semibold mt-6">$300</p>
-          <p className="text-[16px] font-semibold text-primary mt-6">50 in stock</p>
+          <p className="text-[24px] font-semibold mt-6">${price}</p>
+          <p className="text-[16px] font-semibold text-primary mt-6">{stock} in stock</p>
           <button className="py-3 w-full bg-primary text-[16px] hover:bg-black transition-all duration-300 font-bold text-white rounded-lg mt-4">
             Add To Cart
           </button>
