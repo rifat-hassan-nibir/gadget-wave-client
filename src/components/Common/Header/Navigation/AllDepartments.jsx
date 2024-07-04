@@ -30,7 +30,7 @@ const AllDepartments = () => {
         <MenuItems
           transition
           anchor="bottom start"
-          className="w-[250px] mt-2 origin-top-right rounded-xl border border-white/5 bg-white p-2 text-sm/6 text-black transition duration-100 ease-out [--anchor-gap:var(--spacing-1)] focus:outline-none data-[closed]:scale-95 data-[closed]:opacity-0"
+          className="w-[250px] mt-2 origin-top-right shadow-lg shadow-gray-100 rounded-xl border border-white/5 bg-white p-2 text-sm/6 text-black transition duration-100 ease-out [--anchor-gap:var(--spacing-1)] focus:outline-none data-[closed]:scale-95 data-[closed]:opacity-0"
         >
           {menuItems.map((item, index) => (
             <MenuItem key={index}>
