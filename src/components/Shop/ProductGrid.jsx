@@ -22,7 +22,6 @@ const ProductGrid = () => {
           <CiBoxList className="size-5" />
         </div>
         <div className="flex gap-4">
-          <h1>{products.length}</h1>
           <select className="select select-bordered rounded-lg select-sm w-full max-w-xs">
             <option>Sort by latest</option>
             <option>Sort by price: high to low</option>

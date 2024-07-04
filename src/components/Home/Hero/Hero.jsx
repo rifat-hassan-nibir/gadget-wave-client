@@ -31,7 +31,7 @@ const Hero = () => {
               <BannerText
                 heading={"Air Mavic 3"}
                 description={"As powerful as it is portable"}
-                textColor={"white"}
+                textColor={"black"}
                 buttonText={"Shop Now"}
                 buttonColor={"black"}
               />
