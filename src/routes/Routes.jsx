@@ -6,6 +6,7 @@ import MainLayout from "../layout/MainLayout";
 import Blogs from "../pages/Blogs";
 import Error404 from "../pages/Error404";
 import ProductDetails from "../pages/ProductDetails";
+import DashboardLayout from "../layout/DashboardLayout";
 
 const router = createBrowserRouter([
   {
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
         element: <ProductDetails />,
       },
     ],
+  },
+  {
+    path: "/dashboard",
+    element: <DashboardLayout />,
   },
 ]);
 
