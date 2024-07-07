@@ -152,7 +152,7 @@ const ProductDetails = () => {
 
           <p className="text-[24px] font-semibold mt-6">${price}</p>
           <p className="text-[16px] font-semibold text-primary mt-6">{stock} in stock</p>
-          <button className="py-3 w-full bg-primary text-[16px] hover:bg-black transition-all duration-300 font-bold text-white rounded-lg mt-4">
+          <button className="py-3 w-full bg-primary text-[16px] hover:bg-secondary transition-all duration-300 font-bold text-white rounded-lg mt-4">
             Add To Cart
           </button>
         </div>

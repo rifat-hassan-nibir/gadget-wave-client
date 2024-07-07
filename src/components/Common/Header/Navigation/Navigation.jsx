@@ -6,7 +6,7 @@ const Navigation = () => {
   return (
     <div>
       {/* Desktop Navigation */}
-      <div className="bg-accent py-2 hidden lg:block">
+      <div className="bg-secondary py-2 hidden lg:block">
         <div className="container mx-auto px-4 lg:px-6 flex justify-between items-center">
           <div className="flex items-center gap-12">
             <AllDepartments />

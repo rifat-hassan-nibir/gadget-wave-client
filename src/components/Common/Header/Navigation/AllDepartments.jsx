@@ -36,7 +36,7 @@ const AllDepartments = () => {
             <MenuItem key={index}>
               <Link
                 to={item.link}
-                className="group flex w-full items-center gap-2 rounded-lg py-2.5 px-3 data-[focus]:bg-accent transition-all duration-200"
+                className="group flex w-full items-center gap-2 rounded-lg py-2.5 px-3 data-[focus]:bg-secondary transition-all duration-200"
               >
                 <SingleDepartment IconName={item.icon} departmentName={item.name} />
               </Link>
