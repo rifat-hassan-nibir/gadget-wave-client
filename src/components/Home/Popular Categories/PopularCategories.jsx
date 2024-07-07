@@ -15,6 +15,7 @@ import "swiper/css/navigation";
 
 // import required modules
 import { Navigation } from "swiper/modules";
+import CustomNavigationButton from "../../Slider/CustomNavigationButton";
 
 const PopularCategories = () => {
   return (
@@ -23,7 +24,20 @@ const PopularCategories = () => {
 
       {/* for desktop */}
       <div className="hidden lg:block">
-        <Swiper slidesPerView={5} spaceBetween={24} navigation={true} loop={true} modules={[Navigation]} className="mySwiper">
+        <Swiper
+          slidesPerView={5}
+          spaceBetween={24}
+          loop={true}
+          navigation={{
+            nextEl: ".popular-next-button",
+            prevEl: ".popular-prev-button",
+          }}
+          modules={[Navigation]}
+          className="mySwiper"
+        >
+          {/* Custom Navigation */}
+          <CustomNavigationButton previousButtonClass={"popular-prev-button"} nextButtonClass={"popular-next-button"} translate={true} />
+
           <SwiperSlide>
             <CategoriesCard categoryImage={audio} title={"Audio"} productNumber={8} />
           </SwiperSlide>
@@ -47,7 +61,20 @@ const PopularCategories = () => {
 
       {/* for mobile */}
       <div className="block lg:hidden">
-        <Swiper slidesPerView={2} spaceBetween={24} navigation={true} loop={true} modules={[Navigation]} className="mySwiper">
+        <Swiper
+          slidesPerView={2}
+          spaceBetween={24}
+          loop={true}
+          navigation={{
+            nextEl: ".popular-next-button",
+            prevEl: ".popular-prev-button",
+          }}
+          modules={[Navigation]}
+          className="mySwiper"
+        >
+          {/* Custom Navigation */}
+          <CustomNavigationButton previousButtonClass={"popular-prev-button"} nextButtonClass={"popular-next-button"} translate={true} />
+
           <SwiperSlide>
             <CategoriesCard categoryImage={audio} title={"Audio"} productNumber={8} />
           </SwiperSlide>

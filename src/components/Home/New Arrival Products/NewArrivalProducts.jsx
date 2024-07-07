@@ -10,6 +10,7 @@ import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import Loading from "../../Utils/Loading";
 import Error from "../../Utils/Error";
+import CustomNavigationButton from "../../Slider/CustomNavigationButton";
 
 const NewArrivalProducts = () => {
   const {
@@ -34,7 +35,25 @@ const NewArrivalProducts = () => {
 
       {/* for desktop */}
       <div className="hidden lg:block">
-        <Swiper slidesPerView={5} spaceBetween={24} navigation={true} loop={true} modules={[Navigation]} className="mySwiper">
+        <Swiper
+          slidesPerView={5}
+          spaceBetween={24}
+          navigation={{
+            nextEl: ".new-next-button",
+            prevEl: ".new-prev-button",
+          }}
+          loop={true}
+          modules={[Navigation]}
+          className="mySwiper"
+        >
+          {/* Custom Navigation */}
+          <CustomNavigationButton
+            previousButtonClass={"new-prev-button"}
+            nextButtonClass={"new-next-button"}
+            shadow={true}
+            translate={true}
+          />
+
           {products.map((product) => (
             <SwiperSlide key={product._id}>
               <ProductCard
@@ -51,11 +70,29 @@ const NewArrivalProducts = () => {
 
       {/* for mobile */}
       <div className="block lg:hidden">
-        <Swiper slidesPerView={2} spaceBetween={24} navigation={true} loop={true} modules={[Navigation]} className="mySwiper">
+        <Swiper
+          slidesPerView={2}
+          spaceBetween={24}
+          navigation={{
+            nextEl: ".new-next-button",
+            prevEl: ".new-prev-button",
+          }}
+          loop={true}
+          modules={[Navigation]}
+          className="mySwiper"
+        >
+          {/* Custom Navigation */}
+          <CustomNavigationButton
+            previousButtonClass={"new-prev-button"}
+            nextButtonClass={"new-next-button"}
+            shadow={true}
+            translate={true}
+          />
+
           {products.map((product) => (
-            <SwiperSlide key={product.id}>
+            <SwiperSlide key={product._id}>
               <ProductCard
-                id={product.id}
+                id={product._id}
                 productImage={product.image}
                 category={product.category}
                 title={product.title}
