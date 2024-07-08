@@ -8,7 +8,7 @@ const Navigation = () => {
       {/* Desktop Navigation */}
       <div className="bg-secondary py-2 hidden lg:block">
         <div className="container mx-auto px-4 lg:px-6 flex justify-between items-center">
-          <div className="flex items-center gap-12">
+          <div className="flex items-center lg:gap-12">
             <AllDepartments />
             <Menu />
           </div>
