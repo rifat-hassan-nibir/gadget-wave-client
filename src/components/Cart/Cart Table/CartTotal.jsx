@@ -1,6 +1,7 @@
+/* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
 
-const CartTotal = () => {
+const CartTotal = ({ quantity }) => {
   return (
     <div className="p-7 border-[3px] border-black rounded-lg">
       <h1 className="text-black text-[14px] font-semibold">CART TOTAL</h1>
@@ -9,11 +10,11 @@ const CartTotal = () => {
       <div className="flex flex-col gap-4 pt-2">
         <div className="flex justify-between">
           <p className="text-[16px] text-gray-600">Subtoal</p>
-          <p className="text-[16px] text-gray-600">$1000</p>
+          <p className="text-[16px] text-gray-600">${quantity * 1000}</p>
         </div>
         <div className="flex justify-between">
           <p className="text-[20px] text-black">TOTAL</p>
-          <p className="text-[20px] text-black">$1000</p>
+          <p className="text-[20px] text-black">${quantity * 1000}</p>
         </div>
       </div>
       {/* Buttons */}

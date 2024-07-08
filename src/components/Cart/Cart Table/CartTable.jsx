@@ -1,21 +1,8 @@
+/* eslint-disable react/prop-types */
 import { TiDeleteOutline } from "react-icons/ti";
 import iphone from "../../../assets/Popular Products/iphone 14.jpg";
-import { useState } from "react";
 
-const CartTable = () => {
-  const [quantity, setQuantity] = useState(1);
-
-  const handleIncrement = () => {
-    setQuantity(quantity + 1);
-  };
-  const handleDecrement = () => {
-    if (quantity > 1) {
-      setQuantity(quantity - 1);
-    } else {
-      return;
-    }
-  };
-
+const CartTable = ({ quantity, handleIncrement, handleDecrement }) => {
   return (
     <div className="overflow-x-auto w-full">
       <table className="table">
