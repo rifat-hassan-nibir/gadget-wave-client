@@ -7,6 +7,7 @@ import Blogs from "../pages/Blogs";
 import Error404 from "../pages/Error404";
 import ProductDetails from "../pages/ProductDetails";
 import DashboardLayout from "../layout/DashboardLayout";
+import Cart from "../pages/Cart";
 
 const router = createBrowserRouter([
   {
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
       {
         path: "/product-details/:id",
         element: <ProductDetails />,
+      },
+      {
+        path: "/cart",
+        element: <Cart />,
       },
     ],
   },

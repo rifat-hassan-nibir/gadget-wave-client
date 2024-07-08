@@ -26,7 +26,7 @@ const links = [
 
 const MobileNavigation = () => {
   return (
-    <div className="drawer">
+    <div className="drawer lg:hidden">
       <input id="my-drawer" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content">
         {/* Page content here */}
