@@ -1,6 +1,6 @@
 import { FaRegHeart } from "react-icons/fa";
 import { BsBarChartFill } from "react-icons/bs";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import Loading from "../components/Utils/Loading";
@@ -123,12 +123,12 @@ const ProductDetails = () => {
             {/* End Rating  */}
             <div className="h-5 border-l-[1px] border-gray-300"></div>
             <button className="flex items-center gap-2">
-              <FaRegHeart className="size-3.5" />
+              <FaRegHeart className="size-4" />
               <p className="text-[13px] font-medium">Add to Wishlist</p>
             </button>
             <div className="h-5 border-l-[1px] border-gray-300"></div>
             <button className="flex items-center gap-2">
-              <BsBarChartFill className="size-3.5" />
+              <BsBarChartFill className="size-4" />
               <p className="text-[13px] font-medium">Compare</p>
             </button>
           </div>
@@ -153,7 +153,7 @@ const ProductDetails = () => {
           <p className="text-[24px] font-semibold mt-6">${price}</p>
           <p className="text-[16px] font-semibold text-primary mt-6">{stock} in stock</p>
           <button className="py-3 w-full bg-primary text-[16px] hover:bg-secondary transition-all duration-300 font-bold text-white rounded-lg mt-4">
-            Add To Cart
+            <Link to="/cart">Add To Cart</Link>
           </button>
         </div>
       </div>

@@ -53,12 +53,13 @@ const CartTable = () => {
             </td>
             <td>
               <div className="flex items-center">
-                <button onClick={handleIncrement} className="p-1 border bg-gray-100">
-                  <p className="text-[18px]">+</p>
-                </button>
-                <p className="px-2 py-1 border-t border-b">{quantity}</p>
                 <button onClick={handleDecrement} className="p-1 border bg-gray-100">
                   <p className="text-[22px]">-</p>
+                </button>
+                <p className="px-2 py-1 border-t border-b">{quantity}</p>
+
+                <button onClick={handleIncrement} className="p-1 border bg-gray-100">
+                  <p className="text-[18px]">+</p>
                 </button>
               </div>
             </td>
