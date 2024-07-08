@@ -19,12 +19,16 @@ const CartTotal = ({ quantity }) => {
       </div>
       {/* Buttons */}
       <div className="flex flex-col gap-2 mt-4">
-        <button className="py-2 bg-primary text-[16px] text-white text-center rounded-lg hover:bg-secondary transition-all duration-300 hover:text-black">
-          <Link to="/checkout">Proceed To Checkout</Link>
-        </button>
-        <button className="py-2 bg-white text-[16px] text-black text-center border border-black rounded-lg">
-          <Link to="/shop">Continue Shopping</Link>
-        </button>
+        <Link
+          to="/checkout"
+          className="py-2 bg-primary text-[16px] text-white text-center rounded-lg hover:bg-secondary transition-all duration-300 hover:text-black"
+        >
+          <button>Proceed To Checkout</button>
+        </Link>
+
+        <Link to="/shop" className="py-2 bg-white text-[16px] text-black text-center border border-black rounded-lg">
+          <button>Continue Shopping</button>
+        </Link>
       </div>
     </div>
   );

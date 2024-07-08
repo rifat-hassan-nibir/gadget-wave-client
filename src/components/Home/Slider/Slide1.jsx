@@ -13,7 +13,7 @@ const Slide1 = () => {
         <hr className="w-16 border-2 border-gray-500 my-4 hidden lg:block" />
         <p className="text-[20px] text-white hidden lg:block">Titanium So Strong. So Light. So Pro.</p>
         <div className="mt-4">
-          <Button text={"Shop Now"} link={"/"} />
+          <Button text={"Shop Now"} link={"/shop"} />
         </div>
       </div>
     </div>

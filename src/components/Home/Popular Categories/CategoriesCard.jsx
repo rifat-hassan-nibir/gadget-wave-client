@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 /* eslint-disable react/prop-types */
 const CategoriesCard = ({ categoryImage, title, productNumber }) => {
   return (
-    <Link to="/" className="text-center space-y-4">
+    <Link to="/shop" className="text-center space-y-4">
       <div className="bg-[#F5F5F7]">
         <img src={categoryImage} className="w-full hover:scale-105 transition-all duration-300" />
       </div>
