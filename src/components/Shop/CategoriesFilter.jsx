@@ -7,7 +7,7 @@ const CategoriesFilter = () => {
       {categories.map((category, index) => (
         <div className="form-control mt-3" key={index}>
           <label className="flex items-center gap-3 cursor-pointer">
-            <input type="checkbox" className="checkbox checkbox-xs bg-white rounded-none" />
+            <input type="radio" name="radio-1" className="size-4" />
             <span className="label-text">{category}</span>
           </label>
         </div>

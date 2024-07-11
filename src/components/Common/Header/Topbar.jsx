@@ -1,10 +1,10 @@
 import { BsBarChartFill, BsCart3 } from "react-icons/bs";
 import { FaRegHeart } from "react-icons/fa";
 import { IoPersonOutline } from "react-icons/io5";
-import MobileNavigation from "./Navigation/MobileNavigation";
 import { TbSearch } from "react-icons/tb";
 import IconGroup from "./IconGroup";
 import { Link, useNavigate } from "react-router-dom";
+import MobileNavigation from "../Header/Navigation/MobileNavigation";
 
 const Topbar = () => {
   const navigate = useNavigate();
