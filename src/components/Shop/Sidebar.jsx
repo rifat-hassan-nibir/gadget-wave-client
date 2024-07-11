@@ -1,12 +1,13 @@
+/* eslint-disable react/prop-types */
 import BrandsFilter from "./BrandsFilter";
 import CategoriesFilter from "./CategoriesFilter";
 
-const Sidebar = () => {
+const Sidebar = ({ setCategory, setBrand }) => {
   return (
     <div>
-      <CategoriesFilter />
+      <CategoriesFilter setCategory={setCategory} setBrand={setBrand} />
       <hr className="my-8" />
-      <BrandsFilter />
+      <BrandsFilter setCategory={setCategory} setBrand={setBrand} />
     </div>
   );
 };
