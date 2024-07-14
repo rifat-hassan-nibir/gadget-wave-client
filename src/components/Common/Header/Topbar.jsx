@@ -37,7 +37,9 @@ const Topbar = () => {
       {/* Icon Group */}
       <div className="flex items-center order-2 sm:order-3">
         <div className="flex items-center gap-4 lg:gap-6">
-          <IconGroup IconName={IoPersonOutline} text={"Sign In"} />
+          <button onClick={() => navigate("/sign-in")}>
+            <IconGroup IconName={IoPersonOutline} text={"Sign In"} />
+          </button>
           <IconGroup IconName={BsBarChartFill} text={"Comparison"} />
           <IconGroup IconName={FaRegHeart} text={"Wishlist"} />
           <button onClick={() => navigate("/cart")}>

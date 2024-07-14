@@ -9,6 +9,8 @@ import ProductDetails from "../pages/ProductDetails";
 import DashboardLayout from "../layout/DashboardLayout";
 import Cart from "../pages/Cart";
 import CheckOut from "../pages/CheckOut";
+import SignIn from "../pages/Authentication/SignIn";
+import SignUp from "../pages/Authentication/SignUp";
 
 const router = createBrowserRouter([
   {
@@ -43,6 +45,14 @@ const router = createBrowserRouter([
       {
         path: "/checkout",
         element: <CheckOut />,
+      },
+      {
+        path: "/sign-in",
+        element: <SignIn />,
+      },
+      {
+        path: "/sign-up",
+        element: <SignUp />,
       },
     ],
   },

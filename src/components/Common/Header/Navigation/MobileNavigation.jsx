@@ -22,6 +22,11 @@ const links = [
     path: "/contact",
     name: "Contact",
   },
+  {
+    id: 5,
+    path: "/sign-in",
+    name: "Sign In",
+  },
 ];
 
 const MobileNavigation = () => {
