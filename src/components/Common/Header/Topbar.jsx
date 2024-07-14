@@ -42,8 +42,15 @@ const Topbar = () => {
           </button>
           <IconGroup IconName={BsBarChartFill} text={"Comparison"} />
           <IconGroup IconName={FaRegHeart} text={"Wishlist"} />
-          <button onClick={() => navigate("/cart")}>
+
+          {/* Cart */}
+          <button onClick={() => navigate("/cart")} className="relative">
             <IconGroup IconName={BsCart3} text={"Cart"} />
+            <div className="absolute -top-2 -right-2">
+              <span className="flex items-center justify-center size-4 bg-primary rounded-full ">
+                <p className="text-[10px] text-white">1</p>
+              </span>
+            </div>
           </button>
 
           {/* Mobile Navigation */}
